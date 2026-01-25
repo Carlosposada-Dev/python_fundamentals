@@ -1,217 +1,251 @@
-"""
-Sección 3: Operators
-Ejercicios Prácticos - DevOps & Cloud Engineering
+# Section 3: Operators - Practical Exercises
 
-Instrucciones Generales:
-- Sigue las convenciones de PEP 8 (espaciado correcto alrededor de operadores)
-- Usa nombres de variables descriptivos en snake_case
-- Define constantes en UPPER_SNAKE_CASE
-- Evita números mágicos
-- Usa paréntesis para claridad en expresiones complejas
-- Crea tu archivo 'soluciones.py' con tus respuestas
-"""
+## 📋 General Instructions
 
-# ============================================
-# Ejercicio 1: Calculadora de Costos de AWS EC2
-# ============================================
-# Dificultad: Fácil
-# Objetivo: Practicar operadores aritméticos básicos
-# Contexto: Calcular el costo mensual de instancias EC2
-#
-# TODO:
-# 1. Define constantes:
-#    - Horas por mes: 730
-#    - Costo por hora de instancia t3.medium: $0.0416
-# 2. Solicita al usuario el número de instancias que desea desplegar
-# 3. Calcula:
-#    - Costo mensual por instancia
-#    - Costo total mensual (todas las instancias)
-#    - Costo anual (12 meses)
-# 4. Imprime los resultados con 2 decimales
-#    Formato sugerido: "Costo mensual por instancia: $30.37"
-#
-# Escribe tu solución en soluciones.py
+- Follow PEP 8 conventions (correct spacing around operators)
+- Use descriptive variable names in snake_case
+- Define constants in UPPER_SNAKE_CASE
+- Avoid magic numbers
+- Use parentheses for clarity in complex expressions
+- Create your `solucion_#.py` file with your answers
 
+---
 
-# ============================================
-# Ejercicio 2: Monitor de CPU - Sistema de Alertas
-# ============================================
-# Dificultad: Fácil-Medio
-# Objetivo: Practicar operadores de comparación y lógicos
-# Contexto: Determinar el nivel de alerta según uso de CPU
-#
-# TODO:
-# 1. Define constantes para umbrales:
-#    - CPU_WARNING: 70%
-#    - CPU_CRITICAL: 90%
-# 2. Solicita al usuario el porcentaje de uso de CPU actual
-# 3. Calcula el porcentaje disponible de CPU
-# 4. Determina el estado usando operadores de comparación:
-#    - estado_normal: CPU < 70%
-#    - estado_warning: CPU >= 70% pero < 90%
-#    - estado_critical: CPU >= 90%
-# 5. Imprime:
-#    - Uso y disponibilidad de CPU
-#    - Estado actual (Normal, Warning, o Critical)
-#
-# PISTA: Usa operadores lógicos (and) para rangos
-#
-# Escribe tu solución en soluciones.py
+## Exercise 1: AWS EC2 Cost Calculator
 
+**Difficulty**: Beginner  
+**Objective**: Practice basic arithmetic operators  
+**Context**: Calculate monthly cost of EC2 instances
 
-# ============================================
-# Ejercicio 3: Balanceador de Carga Round-Robin
-# ============================================
-# Dificultad: Medio
-# Objetivo: Practicar operador módulo (%)
-# Contexto: Distribuir requests entre servidores usando round-robin
-#
-# TODO:
-# 1. Define constante:
-#    - TOTAL_SERVIDORES: 4
-# 2. Simula 15 requests entrantes (usa un loop manual o simula con números)
-# 3. Para cada request, calcula a qué servidor debe ir usando módulo:
-#    servidor_asignado = numero_request % TOTAL_SERVIDORES
-# 4. Imprime la distribución de los primeros 10 requests
-#    Formato: "Request #1 → Servidor 1"
-#            "Request #2 → Servidor 2"
-#            etc.
-#
-# NOTA: Esto simula un algoritmo de load balancing simple
-# EXTRA: Cuenta cuántos requests va a cada servidor
-#
-# Escribe tu solución en soluciones.py
+### TODO:
 
+1. Define constants:
+   - Hours per month: 730
+   - Cost per hour for t3.medium instance: $0.0416
 
-# ============================================
-# Ejercicio 4: Calculadora de Subnetting - Hosts Disponibles
-# ============================================
-# Dificultad: Medio
-# Objetivo: Practicar operador potencia (**) y división entera (//)
-# Contexto: Calcular hosts disponibles en una subnet
-#
-# TODO:
-# 1. Solicita al usuario la máscara de subred (ejemplo: 24 para /24)
-# 2. Calcula:
-#    - Total de direcciones IP = 2 ** (32 - mascara)
-#    - Hosts utilizables = total_direcciones - 2 (red y broadcast)
-# 3. Si el usuario quiere distribuir hosts en múltiples subnets:
-#    - Solicita número de subnets deseadas
-#    - Calcula hosts por subnet usando división entera (//)
-# 4. Imprime todos los resultados
-#
-# Ejemplo:
-#   Máscara: /24
-#   Total IPs: 256
-#   Hosts utilizables: 254
-#   Si divides en 2 subnets: 127 hosts por subnet
-#
-# Escribe tu solución en soluciones.py
+2. Request from the user the number of instances to deploy
+3. Calculate:
+   - Monthly cost per instance
+   - Total monthly cost (all instances)
+   - Annual cost (12 months)
 
+4. Print results with 2 decimal places
+   - Suggested format: `"Cost per instance per month: $30.37"`
 
-# ============================================
-# Ejercicio 5: Health Check Aggregator
-# ============================================
-# Dificultad: Medio
-# Objetivo: Practicar múltiples operadores lógicos (and, or, not)
-# Contexto: Determinar si un servidor está completamente saludable
-#
-# TODO:
-# 1. Define constantes para umbrales:
-#    - CPU_MAX: 85
-#    - MEMORIA_MAX: 90
-#    - DISCO_MAX: 80
-#    - LATENCIA_MAX_MS: 200
-# 2. Solicita al usuario las métricas actuales:
-#    - Uso de CPU (%)
-#    - Uso de memoria (%)
-#    - Uso de disco (%)
-#    - Latencia (ms)
-#    - ¿Backup completado? (True/False - usa input y convierte)
-# 3. Evalúa condiciones:
-#    - recursos_ok: CPU, memoria y disco bajo umbral (usa and)
-#    - red_ok: latencia bajo umbral
-#    - servidor_saludable: recursos_ok AND red_ok AND backup_completado
-#    - requiere_atencion_inmediata: CPU > 95 OR memoria > 95
-# 4. Imprime el resultado de todas las evaluaciones
-#
-# NOTA: Esto simula un health check agregado de múltiples métricas
-#
-# Escribe tu solución en soluciones.py
+Write your solution in `solution_1.py`
 
+---
 
-# ============================================
-# Ejercicio 6: Auto-Scaling Decision Engine
-# ============================================
-# Dificultad: Medio-Difícil
-# Objetivo: Combinar todos los operadores aprendidos
-# Contexto: Decidir si escalar instancias basado en múltiples métricas
-#
-# TODO:
-# 1. Define constantes:
-#    - INSTANCIAS_MIN: 2
-#    - INSTANCIAS_MAX: 10
-#    - CPU_SCALE_UP: 75
-#    - CPU_SCALE_DOWN: 30
-#    - REQUESTS_POR_INSTANCIA: 1000
-# 2. Solicita datos actuales:
-#    - Número de instancias activas
-#    - CPU promedio (%)
-#    - Total de requests actuales
-# 3. Calcula:
-#    - Requests por instancia actual = total_requests // instancias
-#    - ¿Necesita scale up? (CPU > 75 OR requests_por_instancia > 1000)
-#    - ¿Puede scale down? (CPU < 30 AND requests_por_instancia < 500 AND instancias > MIN)
-#    - ¿Está en límite máximo? (instancias >= MAX)
-#    - ¿Está en límite mínimo? (instancias <= MIN)
-# 4. Determina acción recomendada:
-#    - "Scale Up" si necesita y no está en máximo
-#    - "Scale Down" si puede y no está en mínimo
-#    - "Mantener" si está en equilibrio
-#    - "En límite" si no puede escalar más
-# 5. Imprime análisis completo y recomendación
-#
-# EXTRA: Calcula cuántas instancias agregar/quitar (±1 o ±2 según severidad)
-#
-# Escribe tu solución en soluciones.py
+## Exercise 2: CPU Monitor - Alert System
 
+**Difficulty**: Beginner-Intermediate  
+**Objective**: Practice comparison and logical operators  
+**Context**: Determine alert level based on CPU usage
 
-# ============================================
-# Ejercicio 7: Verificador de Direcciones IP Pares/Impares
-# ============================================
-# Dificultad: Medio
-# Objetivo: Practicar operador módulo para verificar paridad
-# Contexto: Clasificar IPs para diferentes pools (pares/impares)
-#
-# TODO:
-# 1. Solicita al usuario el último octeto de una IP (0-255)
-#    Ejemplo: Para 192.168.1.100, ingresa 100
-# 2. Verifica:
-#    - ¿Es par o impar? (usa módulo %)
-#    - ¿Es múltiplo de 5? (útil para crear pools cada 5 IPs)
-#    - ¿Es divisible entre 10?
-# 3. Basado en paridad, asigna a un pool:
-#    - IPs pares → Pool A (servidores web)
-#    - IPs impares → Pool B (servidores de aplicación)
-# 4. Imprime:
-#    - IP completa (asume red 192.168.1.X)
-#    - Paridad (Par/Impar)
-#    - Pool asignado
-#    - Si es múltiplo de 5 o 10
-#
-# NOTA: En redes reales esto se usa para segmentación y organización
-#
-# Escribe tu solución en soluciones.py
+### TODO:
 
+1. Define constants for thresholds:
+   - `CPU_WARNING`: 70%
+   - `CPU_CRITICAL`: 90%
 
-# ============================================
-# IMPORTANTE:
-# ============================================
-# 1. Crea un archivo 'soluciones.py' en la misma carpeta
-# 2. Resuelve cada ejercicio aplicando PEP 8 y Clean Code
-# 3. Prueba tu código con diferentes valores de entrada
-# 4. Piensa en casos edge (CPU 0%, 100%, valores negativos, etc.)
-# 5. Cuando termines, comparte tu código para revisión
-#
-# ¡Éxito! 🚀
-# ============================================
+2. Request from the user the current CPU usage percentage
+3. Calculate available CPU percentage
+4. Determine status using comparison operators:
+   - `normal_state`: CPU < 70%
+   - `warning_state`: CPU >= 70% and < 90%
+   - `critical_state`: CPU >= 90%
+
+5. Print:
+   - CPU usage and available CPU
+   - Current status (Normal, Warning, or Critical)
+
+### Tip:
+- Use logical operators (and) for ranges
+
+Write your solution in `solution_2.py`
+
+---
+
+## Exercise 3: Round-Robin Load Balancer
+
+**Difficulty**: Intermediate  
+**Objective**: Practice modulo operator (%)  
+**Context**: Distribute requests among servers using round-robin
+
+### TODO:
+
+1. Define constant:
+   - `TOTAL_SERVERS`: 4
+
+2. Simulate 15 incoming requests
+3. For each request, calculate which server it should go to using modulo:
+   ```python
+   assigned_server = request_number % TOTAL_SERVERS
+   ```
+
+4. Print the distribution of the first 10 requests
+   - Format: `"Request #1 → Server 1"`
+   - `"Request #2 → Server 2"`
+   - etc.
+
+### Note:
+- This simulates a simple load balancing algorithm
+
+### Extra:
+- Count how many requests go to each server
+
+Write your solution in `solution_3.py`
+
+---
+
+## Exercise 4: Subnet Calculator - Available Hosts
+
+**Difficulty**: Intermediate  
+**Objective**: Practice power operator (**) and integer division (//)  
+**Context**: Calculate available hosts in a subnet
+
+### TODO:
+
+1. Request from the user the subnet mask (example: 24 for /24)
+2. Calculate:
+   - Total IP addresses = 2 ** (32 - mask)
+   - Usable hosts = total_addresses - 2 (network and broadcast)
+
+3. If user wants to distribute hosts across multiple subnets:
+   - Request desired number of subnets
+   - Calculate hosts per subnet using integer division (//)
+
+4. Print all results
+
+### Example:
+```
+Mask: /24
+Total IPs: 256
+Usable hosts: 254
+If divided into 2 subnets: 127 hosts per subnet
+```
+
+Write your solution in `solution_4.py`
+
+---
+
+## Exercise 5: Health Check Aggregator
+
+**Difficulty**: Intermediate  
+**Objective**: Practice multiple logical operators (and, or, not)  
+**Context**: Determine if a server is completely healthy
+
+### TODO:
+
+1. Define constants for thresholds:
+   - `CPU_MAX`: 85
+   - `MEMORY_MAX`: 90
+   - `DISK_MAX`: 80
+   - `LATENCY_MAX_MS`: 200
+
+2. Request from user the current metrics:
+   - CPU usage (%)
+   - Memory usage (%)
+   - Disk usage (%)
+   - Latency (ms)
+   - Backup completed? (True/False - use input and convert)
+
+3. Evaluate conditions:
+   - `resources_ok`: CPU, memory and disk below threshold (use and)
+   - `network_ok`: latency below threshold
+   - `server_healthy`: resources_ok AND network_ok AND backup_completed
+   - `requires_immediate_attention`: CPU > 95 OR memory > 95
+
+4. Print results of all evaluations
+
+### Note:
+- This simulates an aggregated health check of multiple metrics
+
+Write your solution in `solution_5.py`
+
+---
+
+## Exercise 6: Auto-Scaling Decision Engine
+
+**Difficulty**: Intermediate-Advanced  
+**Objective**: Combine all learned operators  
+**Context**: Decide whether to scale instances based on multiple metrics
+
+### TODO:
+
+1. Define constants:
+   - `MIN_INSTANCES`: 2
+   - `MAX_INSTANCES`: 10
+   - `CPU_SCALE_UP`: 75
+   - `CPU_SCALE_DOWN`: 30
+   - `REQUESTS_PER_INSTANCE`: 1000
+
+2. Request current data:
+   - Number of active instances
+   - Average CPU (%)
+   - Total current requests
+
+3. Calculate:
+   - Requests per instance = total_requests // instances
+   - Need scale up? (CPU > 75 OR requests_per_instance > 1000)
+   - Can scale down? (CPU < 30 AND requests_per_instance < 500 AND instances > MIN)
+   - At max limit? (instances >= MAX)
+   - At min limit? (instances <= MIN)
+
+4. Determine recommended action:
+   - `"Scale Up"` if needed and not at maximum
+   - `"Scale Down"` if possible and not at minimum
+   - `"Maintain"` if in equilibrium
+   - `"At limit"` if can't scale more
+
+5. Print complete analysis and recommendation
+
+### Extra:
+- Calculate how many instances to add/remove (±1 or ±2 based on severity)
+
+Write your solution in `solution_6.py`
+
+---
+
+## Exercise 7: IP Address Parity Checker
+
+**Difficulty**: Intermediate  
+**Objective**: Practice modulo operator for parity verification  
+**Context**: Classify IPs for different pools (even/odd)
+
+### TODO:
+
+1. Request from the user the last octet of an IP (0-255)
+   - Example: For 192.168.1.100, enter 100
+
+2. Verify:
+   - Is it even or odd? (use modulo %)
+   - Is it a multiple of 5? (useful for creating pools every 5 IPs)
+   - Is it divisible by 10?
+
+3. Based on parity, assign to a pool:
+   - Even IPs → Pool A (web servers)
+   - Odd IPs → Pool B (application servers)
+
+4. Print:
+   - Complete IP (assume 192.168.1.X network)
+   - Parity (Even/Odd)
+   - Assigned pool
+   - If it's a multiple of 5 or 10
+
+### Note:
+- In real networks this is used for segmentation and organization
+
+Write your solution in `solution_7.py`
+
+---
+
+## ✅ Important
+
+1. Create a file called `solution_7.py` in the same folder
+2. Test your code with different input values
+3. Think about edge cases (0%, 100%, negative values, etc.)
+4. Apply PEP 8 and Clean Code principles
+5. When you finish, share your code for review
+
+**Good luck! 🚀**

@@ -1,116 +1,116 @@
-# Sección 2: Variables & Data Types
+# Section 2: Variables & Data Types
 
-## 🎯 ¿Qué son las Variables?
+## 🎯 What Are Variables?
 
-Una **variable** es un contenedor que almacena datos en la memoria de tu computadora. Piensa en ella como una caja etiquetada donde guardas información que necesitarás usar más tarde.
+A **variable** is a container that stores data in your computer's memory. Think of it as a labeled box where you keep information that you'll need to use later.
 
-En Python, crear una variable es tan simple como darle un nombre y asignarle un valor:
+In Python, creating a variable is as simple as giving it a name and assigning it a value:
 
 ```python
-edad = 25
-nombre = "Ana"
-temperatura = 36.5
-esta_activo = True
+age = 25
+name = "Ana"
+temperature = 36.5
+is_active = True
 ```
 
-### Características importantes de las variables en Python:
+### Important Characteristics of Variables in Python:
 
-1. **Tipado dinámico**: No necesitas declarar el tipo de dato explícitamente. Python lo infiere automáticamente.
-2. **Reasignables**: Puedes cambiar el valor (y hasta el tipo) de una variable cuando quieras.
-3. **Case-sensitive**: `edad`, `Edad` y `EDAD` son tres variables diferentes.
+1. **Dynamic Typing**: You don't need to declare the data type explicitly. Python infers it automatically.
+2. **Reassignable**: You can change the value (and even the type) of a variable whenever you want.
+3. **Case-sensitive**: `age`, `Age` and `AGE` are three different variables.
 
-## 📊 Tipos de Datos Básicos en Python
+## 📊 Basic Data Types in Python
 
-Python tiene varios tipos de datos fundamentales. Aquí están los más importantes para comenzar:
+Python has several fundamental data types. Here are the most important ones to get started:
 
-### 1. **Enteros (int)** - Números sin decimales
+### 1. **Integers (int)** - Numbers without decimals
 
 ```python
-edad_usuario = 25
-anio_actual = 2025
-temperatura_celsius = -5
+user_age = 25
+current_year = 2025
+temperature_celsius = -5
 ```
 
-### 2. **Flotantes (float)** - Números con decimales
+### 2. **Floats (float)** - Numbers with decimals
 
 ```python
-altura_metros = 1.75
-precio_producto = 49.99
+height_meters = 1.75
+product_price = 49.99
 pi = 3.14159
 ```
 
-### 3. **Cadenas de texto (str)** - Texto entre comillas
+### 3. **Strings (str)** - Text in quotes
 
 ```python
-nombre_completo = "María García"
-ciudad = 'Bogotá'
-mensaje = """Este es un texto
-que ocupa varias líneas"""
+full_name = "María García"
+city = 'Bogotá'
+message = """This is a text
+that spans multiple lines"""
 ```
 
-**Nota**: Puedes usar comillas simples `' '` o dobles `" "`, pero es convención usar dobles para strings normales.
+**Note**: You can use single `' '` or double `" "` quotes, but the convention is to use double quotes for regular strings.
 
-### 4. **Booleanos (bool)** - Valores de verdad
+### 4. **Booleans (bool)** - Truth values
 
 ```python
-esta_logueado = True
-es_mayor_edad = False
-tiene_descuento = True
+is_logged_in = True
+is_adult = False
+has_discount = True
 ```
 
-**Importante**: `True` y `False` van con mayúscula inicial en Python.
+**Important**: `True` and `False` start with a capital letter in Python.
 
-### 5. **NoneType** - Ausencia de valor
+### 5. **NoneType** - Absence of value
 
 ```python
-resultado = None  # Aún no tiene valor asignado
-usuario_actual = None  # No hay usuario logueado
+result = None  # No value assigned yet
+current_user = None  # No logged-in user
 ```
 
-## 🔍 Verificar el tipo de una variable
+## 🔍 Checking the Type of a Variable
 
-Usa la función `type()` para saber qué tipo de dato es una variable:
+Use the `type()` function to find out what data type a variable is:
 
 ```python
-edad = 30
-print(type(edad))  # <class 'int'>
+age = 30
+print(type(age))  # <class 'int'>
 
-precio = 99.99
-print(type(precio))  # <class 'float'>
+price = 99.99
+print(type(price))  # <class 'float'>
 
-nombre = "Python"
-print(type(nombre))  # <class 'str'>
+name = "Python"
+print(type(name))  # <class 'str'>
 ```
 
-## 🔄 Conversión de Tipos (Type Casting)
+## 🔄 Type Conversion (Type Casting)
 
-A veces necesitas convertir un tipo de dato a otro:
+Sometimes you need to convert one data type to another:
 
 ```python
-# String a entero
-edad_texto = "25"
-edad_numero = int(edad_texto)  # 25 (int)
+# String to integer
+age_text = "25"
+age_number = int(age_text)  # 25 (int)
 
-# Entero a string
-puntos = 100
-mensaje = "Tienes " + str(puntos) + " puntos"
+# Integer to string
+points = 100
+message = "You have " + str(points) + " points"
 
-# String a float
-precio_texto = "49.99"
-precio_numero = float(precio_texto)  # 49.99 (float)
+# String to float
+price_text = "49.99"
+price_number = float(price_text)  # 49.99 (float)
 
-# Float a int (pierde los decimales)
-promedio = 8.7
-promedio_entero = int(promedio)  # 8 (trunca, no redondea)
+# Float to int (loses decimals)
+average = 8.7
+average_int = int(average)  # 8 (truncates, doesn't round)
 ```
 
-## 🎨 Buenas Prácticas con Variables
+## 🎨 Good Practices with Variables
 
-### ✅ Nombres Descriptivos (PEP 8)
+### ✅ Descriptive Names (PEP 8)
 
-Los nombres de variables deben revelar su intención. Cualquier persona que lea tu código debe entender qué contiene la variable sin necesidad de comentarios.
+Variable names should reveal their intention. Anyone reading your code should understand what the variable contains without needing comments.
 
-**❌ Malo:**
+**❌ Bad:**
 ```python
 x = 25
 n = "Juan"
@@ -119,258 +119,258 @@ t = True
 p = 49.99
 ```
 
-**✅ Bueno:**
+**✅ Good:**
 ```python
-edad_usuario = 25
-nombre_completo = "Juan"
-altura_metros = 1.75
-esta_activo = True
-precio_producto = 49.99
+user_age = 25
+full_name = "Juan"
+height_meters = 1.75
+is_active = True
+product_price = 49.99
 ```
 
-### ✅ Convención de Nombres en Python (snake_case)
+### ✅ Python Naming Convention (snake_case)
 
-Python usa **snake_case** para variables y funciones: palabras en minúscula separadas por guiones bajos.
+Python uses **snake_case** for variables and functions: words in lowercase separated by underscores.
 
 ```python
-# Variables normales: snake_case
-nombre_completo = "Ana López"
-edad_actual = 30
-total_productos = 5
-temperatura_promedio = 22.5
+# Normal variables: snake_case
+full_name = "Ana López"
+current_age = 30
+total_products = 5
+average_temperature = 22.5
 
-# Constantes: UPPER_SNAKE_CASE
+# Constants: UPPER_SNAKE_CASE
 PI = 3.14159
-MAX_INTENTOS = 3
-EDAD_MINIMA = 18
-URL_BASE = "https://api.example.com"
+MAX_ATTEMPTS = 3
+MINIMUM_AGE = 18
+BASE_URL = "https://api.example.com"
 
-# Nombres de una palabra: sin guiones
-edad = 25
-nombre = "Pedro"
-precio = 99.99
+# Single-word names: no underscores
+age = 25
+name = "Pedro"
+price = 99.99
 ```
 
-### ✅ Evitar Números Mágicos
+### ✅ Avoid Magic Numbers
 
-Un "número mágico" es un valor hardcodeado sin contexto. Usa constantes con nombres descriptivos.
+A "magic number" is a hardcoded value without context. Use constants with descriptive names.
 
-**❌ Malo:**
+**❌ Bad:**
 ```python
-if edad < 18:
-    print("No puedes registrarte")
+if age < 18:
+    print("You cannot register")
 
-precio_final = precio * 0.19
+final_price = price * 0.19
 ```
 
-**✅ Bueno:**
+**✅ Good:**
 ```python
-EDAD_MINIMA_REGISTRO = 18
-if edad < EDAD_MINIMA_REGISTRO:
-    print("No puedes registrarte")
+MINIMUM_REGISTRATION_AGE = 18
+if age < MINIMUM_REGISTRATION_AGE:
+    print("You cannot register")
 
-IVA = 0.19
-precio_final = precio * IVA
+TAX_RATE = 0.19
+final_price = price * TAX_RATE
 ```
 
-### ✅ Una Variable, Un Propósito
+### ✅ One Variable, One Purpose
 
-Evita reutilizar variables para propósitos diferentes. Crea una nueva variable con un nombre descriptivo.
+Avoid reusing variables for different purposes. Create a new variable with a descriptive name.
 
-**❌ Malo:**
+**❌ Bad:**
 ```python
-dato = input("Nombre: ")
-print(f"Hola {dato}")
-dato = int(input("Edad: "))  # Reutilizando 'dato' para otra cosa
-print(f"Tienes {dato} años")
+data = input("Name: ")
+print(f"Hello {data}")
+data = int(input("Age: "))  # Reusing 'data' for something else
+print(f"You are {data} years old")
 ```
 
-**✅ Bueno:**
+**✅ Good:**
 ```python
-nombre = input("Nombre: ")
-print(f"Hola {nombre}")
-edad = int(input("Edad: "))
-print(f"Tienes {edad} años")
+name = input("Name: ")
+print(f"Hello {name}")
+age = int(input("Age: "))
+print(f"You are {age} years old")
 ```
 
-### ✅ Nombres en Inglés vs Español
+### ✅ English vs Spanish Names
 
-**Recomendación**: Elige un idioma y mantén consistencia en todo tu proyecto.
+**Recommendation**: Choose a language and maintain consistency throughout your project.
 
-- **Inglés**: Estándar en la industria, facilita colaboración internacional
-- **Español**: Válido para proyectos locales o educativos
+- **English**: Industry standard, facilitates international collaboration
+- **Spanish**: Valid for local or educational projects
 
 ```python
-# Opción 1: Todo en inglés
+# Option 1: All in English
 user_age = 25
 product_price = 49.99
 
-# Opción 2: Todo en español
+# Option 2: All in Spanish
 edad_usuario = 25
 precio_producto = 49.99
 
-# ❌ NO MEZCLAR
-user_edad = 25  # Inconsistente
-precio_product = 49.99  # Inconsistente
+# ❌ DON'T MIX
+user_edad = 25  # Inconsistent
+precio_product = 49.99  # Inconsistent
 ```
 
-## 💡 Conceptos Importantes
+## 💡 Important Concepts
 
-### Asignación Múltiple
+### Multiple Assignment
 
-Python permite asignar valores a múltiples variables en una línea:
+Python allows you to assign values to multiple variables in one line:
 
 ```python
-# Asignar diferentes valores
-nombre, edad, ciudad = "Ana", 28, "Medellín"
+# Assign different values
+name, age, city = "Ana", 28, "Medellín"
 
-# Asignar el mismo valor
+# Assign the same value
 x = y = z = 0
 
-# Intercambiar valores (swap)
+# Swap values
 a = 5
 b = 10
-a, b = b, a  # Ahora a=10, b=5
+a, b = b, a  # Now a=10, b=5
 ```
 
-### Variables y Memoria
+### Variables and Memory
 
-Cuando asignas un valor a una variable, Python crea un objeto en memoria y la variable es solo una "etiqueta" que apunta a ese objeto.
+When you assign a value to a variable, Python creates an object in memory and the variable is just a "label" that points to that object.
 
 ```python
-edad = 25  # Python crea un objeto int con valor 25
-edad = 30  # Python crea un NUEVO objeto int con valor 30
+age = 25  # Python creates an int object with value 25
+age = 30  # Python creates a NEW int object with value 30
 ```
 
-### Palabras Reservadas
+### Reserved Words
 
-Python tiene palabras que NO puedes usar como nombres de variables porque tienen significados especiales:
+Python has words that you CANNOT use as variable names because they have special meanings:
 
 ```python
-# ❌ NO USAR COMO VARIABLES:
+# ❌ DON'T USE AS VARIABLES:
 # False, True, None, and, or, not, if, else, elif, 
 # for, while, break, continue, def, class, return, etc.
 
-# Esto da error:
+# This causes an error:
 for = 10  # SyntaxError
 class = "Python"  # SyntaxError
 ```
 
-## 🎓 Comparación con otros lenguajes
+## 🎓 Comparison with Other Languages
 
-Si vienes de otros lenguajes, aquí algunas diferencias clave:
+If you come from other languages, here are some key differences:
 
-| Aspecto | Java/C++ | Python |
-|---------|----------|--------|
-| Declaración | `int edad = 25;` | `edad = 25` |
-| Tipado | Estático | Dinámico |
-| Punto y coma | Requerido `;` | No se usa |
-| Constantes | `final int MAX = 10;` | `MAX = 10` (convención) |
+| Aspect | Java/C++ | Python |
+|--------|----------|--------|
+| Declaration | `int age = 25;` | `age = 25` |
+| Typing | Static | Dynamic |
+| Semicolon | Required `;` | Not used |
+| Constants | `final int MAX = 10;` | `MAX = 10` (convention) |
 
-## ⚠️ Errores Comunes
+## ⚠️ Common Errors
 
-### 1. Variables no definidas
+### 1. Undefined variables
 ```python
-print(nombre)  # NameError: name 'nombre' is not defined
-# Primero debes asignar: nombre = "Ana"
+print(name)  # NameError: name 'name' is not defined
+# First you must assign: name = "Ana"
 ```
 
-### 2. Mezclar tipos incompatibles
+### 2. Mixing incompatible types
 ```python
-edad = "25"
-resultado = edad + 5  # TypeError: can't concatenate str and int
-# Solución: resultado = int(edad) + 5
+age = "25"
+result = age + 5  # TypeError: can't concatenate str and int
+# Solution: result = int(age) + 5
 ```
 
-### 3. Nombres inválidos
+### 3. Invalid names
 ```python
-1edad = 25  # SyntaxError: no puede empezar con número
-mi-variable = 10  # SyntaxError: el guion se interpreta como resta
-mi variable = 5  # SyntaxError: no se permiten espacios
+1age = 25  # SyntaxError: cannot start with a number
+my-variable = 10  # SyntaxError: hyphen is interpreted as subtraction
+my variable = 5  # SyntaxError: spaces not allowed
 ```
 
-### 4. Confundir asignación (=) con comparación (==)
+### 4. Confusing assignment (=) with comparison (==)
 ```python
-edad = 25  # Asignación: le das el valor 25 a edad
-edad == 25  # Comparación: preguntas si edad es igual a 25 (devuelve True/False)
+age = 25  # Assignment: you give the value 25 to age
+age == 25  # Comparison: you ask if age equals 25 (returns True/False)
 ```
 
-## 📝 Ejemplo Completo con Buenas Prácticas
+## 📝 Complete Example with Good Practices
 
 ```python
 """
-Programa: Calculadora de IMC (Índice de Masa Corporal)
-Demuestra el uso correcto de variables y tipos de datos
+Program: BMI Calculator (Body Mass Index)
+Demonstrates correct use of variables and data types
 """
 
-# Constantes (valores que no cambian)
-IMC_BAJO_PESO = 18.5
-IMC_PESO_NORMAL = 24.9
-IMC_SOBREPESO = 29.9
+# Constants (values that don't change)
+BMI_UNDERWEIGHT = 18.5
+BMI_NORMAL_WEIGHT = 24.9
+BMI_OVERWEIGHT = 29.9
 
-# Entrada de datos del usuario
-nombre_paciente = input("Ingresa tu nombre: ")
-peso_kilogramos = float(input("Ingresa tu peso en kg: "))
-altura_metros = float(input("Ingresa tu altura en metros: "))
+# User data input
+patient_name = input("Enter your name: ")
+weight_kilograms = float(input("Enter your weight in kg: "))
+height_meters = float(input("Enter your height in meters: "))
 
-# Cálculo del IMC
-indice_masa_corporal = peso_kilogramos / (altura_metros ** 2)
+# BMI calculation
+body_mass_index = weight_kilograms / (height_meters ** 2)
 
-# Determinación de categoría
-if indice_masa_corporal < IMC_BAJO_PESO:
-    categoria = "Bajo peso"
-elif indice_masa_corporal <= IMC_PESO_NORMAL:
-    categoria = "Peso normal"
-elif indice_masa_corporal <= IMC_SOBREPESO:
-    categoria = "Sobrepeso"
+# Category determination
+if body_mass_index < BMI_UNDERWEIGHT:
+    category = "Underweight"
+elif body_mass_index <= BMI_NORMAL_WEIGHT:
+    category = "Normal weight"
+elif body_mass_index <= BMI_OVERWEIGHT:
+    category = "Overweight"
 else:
-    categoria = "Obesidad"
+    category = "Obesity"
 
-# Mostrar resultados
-print(f"\n--- Resultados para {nombre_paciente} ---")
-print(f"IMC: {indice_masa_corporal:.2f}")
-print(f"Categoría: {categoria}")
+# Display results
+print(f"\n--- Results for {patient_name} ---")
+print(f"BMI: {body_mass_index:.2f}")
+print(f"Category: {category}")
 ```
 
-**Nota lo que hace que este código sea limpio:**
-- Nombres descriptivos que revelan intención
-- Constantes para valores importantes
-- snake_case consistente
-- Comentarios que explican secciones, no lo obvio
-- Cálculos claros y legibles
+**Notice what makes this code clean:**
+- Descriptive names that reveal intention
+- Constants for important values
+- Consistent snake_case
+- Comments that explain sections, not the obvious
+- Clear and readable calculations
 
-## 🔗 Conexión con lo que viene
+## 🔗 Connection with What's Next
 
-Las variables y tipos de datos son la base de TODO en programación. En las próximas secciones verás:
+Variables and data types are the foundation of EVERYTHING in programming. In the next sections you'll see:
 
-- **Operadores**: Cómo manipular y combinar variables
-- **Strings**: Métodos avanzados para trabajar con texto
-- **Estructuras de datos**: Listas, diccionarios para agrupar variables
-- **Funciones**: Cómo organizar tu código usando variables como parámetros
+- **Operators**: How to manipulate and combine variables
+- **Strings**: Advanced methods for working with text
+- **Data Structures**: Lists, dictionaries to group variables
+- **Functions**: How to organize your code using variables as parameters
 
-## ✅ Checklist de Dominio
+## ✅ Mastery Checklist
 
-Antes de continuar, asegúrate de poder:
+Before continuing, make sure you can:
 
-- [ ] Crear variables con diferentes tipos de datos
-- [ ] Explicar qué es el tipado dinámico
-- [ ] Usar `type()` para verificar tipos de datos
-- [ ] Convertir entre tipos (int, float, str)
-- [ ] Nombrar variables siguiendo snake_case
-- [ ] Identificar y evitar números mágicos
-- [ ] Escribir código con nombres descriptivos
+- [ ] Create variables with different data types
+- [ ] Explain what dynamic typing is
+- [ ] Use `type()` to verify data types
+- [ ] Convert between types (int, float, str)
+- [ ] Name variables following snake_case
+- [ ] Identify and avoid magic numbers
+- [ ] Write code with descriptive names
 
 ---
 
-**¡Ahora es tu turno!** 🎤
+**Now it's your turn!** 🎤
 
-Antes de pasar a los ejercicios, necesito validar que has comprendido estos conceptos.
+Before moving on to the exercises, I need to validate that you've understood these concepts.
 
-Por favor, responde estas preguntas con tus propias palabras:
+Please answer these questions in your own words:
 
-1. **¿Qué es una variable y por qué es importante usar nombres descriptivos?**
-2. **¿Cuál es la diferencia entre `int`, `float` y `str`? Dame un ejemplo de cuándo usarías cada uno.**
-3. **¿Qué significa que Python tenga "tipado dinámico"? ¿En qué se diferencia de Java o C++?**
-4. **¿Qué es un "número mágico" y por qué debemos evitarlos?**
+1. **What is a variable and why is it important to use descriptive names?**
+2. **What is the difference between `int`, `float` and `str`? Give me an example of when you would use each one.**
+3. **What does it mean that Python has "dynamic typing"? How does it differ from Java or C++?**
+4. **What is a "magic number" and why should we avoid them?**
 
-Tómate tu tiempo para pensar y responder. No hay prisa, lo importante es que entiendas bien estos fundamentos. 😊
+Take your time to think and answer. There's no rush, what matters is that you understand these fundamentals well. 😊

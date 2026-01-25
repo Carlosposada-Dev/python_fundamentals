@@ -1,22 +1,22 @@
 # ============================================
-# Ejercicio 3: Conversor de Temperatura
+# Exercise 3: Temperature Converter
 # ============================================
-# Dificultad: Fácil-Medio
-# Objetivo: Practicar conversión de tipos y uso de constantes
-# Requisitos de código limpio: usar constantes para fórmulas, evitar números mágicos
+# Difficulty: Beginner-Intermediate
+# Objective: Practice type conversion and use of constants
+# Clean Code Requirements: Use constants for formulas, avoid magic numbers
 #
 # TODO:
-# 1. Define constantes para las fórmulas de conversión:
-#    - Factor de multiplicación Celsius a Fahrenheit (9/5)
-#    - Valor de ajuste para Fahrenheit (32)
-# 2. Solicita al usuario una temperatura en Celsius
-# 3. Convierte la temperatura a Fahrenheit usando: F = C × (9/5) + 32
-# 4. Convierte la temperatura a Kelvin usando: K = C + 273.15
-# 5. Imprime las tres temperaturas con mensajes claros
+# 1. Define constants for conversion formulas:
+#    - Multiplication factor Celsius to Fahrenheit (9/5)
+#    - Adjustment value for Fahrenheit (32)
+# 2. Request a temperature in Celsius from the user
+# 3. Convert to Fahrenheit using: F = C × (9/5) + 32
+# 4. Convert to Kelvin using: K = C + 273.15
+# 5. Print all three temperatures with clear messages
 #
-# EXTRA: Formatea las salidas con 2 decimales
+# EXTRA: Format outputs with 2 decimal places
 #
-# Escribe tu solución en soluciones.py
+# Write your solution in soluciones.py
 
 CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
 ADJUST_VALUE_FAHRENHEIT = 32

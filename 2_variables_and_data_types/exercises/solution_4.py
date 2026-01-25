@@ -1,27 +1,27 @@
 # ============================================
-# Ejercicio 4: Validación de Edad
+# Exercise 4: Age Validation
 # ============================================
-# Dificultad: Medio
-# Objetivo: Trabajar con constantes, booleanos y validación de datos
-# Requisitos de código limpio: constantes en UPPER_CASE, nombres booleanos descriptivos
+# Difficulty: Intermediate
+# Objective: Work with constants, booleans, and data validation
+# Clean Code Requirements: Constants in UPPER_CASE, descriptive boolean names
 #
 # TODO:
-# 1. Define constantes para:
-#    - Edad mínima para votar (18)
-#    - Edad mínima para licencia de conducir (16)
-#    - Edad para ser mayor de edad (18)
-# 2. Solicita al usuario su edad
-# 3. Crea variables booleanas que determinen si la persona:
-#    - Puede votar
-#    - Puede conducir
-#    - Es mayor de edad
-# 4. Imprime el resultado de cada validación con mensajes claros
-#    Ejemplo: "¿Puedes votar? True" o "¿Puedes votar? False"
+# 1. Define constants for:
+#    - Minimum age to vote (18)
+#    - Minimum age to get a driver's license (16)
+#    - Age of adulthood (18)
+# 2. Request the user's age
+# 3. Create boolean variables to determine if the person:
+#    - Can vote
+#    - Can drive
+#    - Is an adult
+# 4. Print results with clear messages
+#    Example: "Can you vote? True" or "Can you vote? False"
 #
-# EXTRA: Los nombres de variables booleanas deben ser autodescriptivos
-# Sugerencia: puede_votar, puede_conducir, es_mayor_edad
+# EXTRA: Boolean variable names should be self-descriptive
+# Suggestion: can_vote, can_drive, is_adult
 #
-# Escribe tu solución en soluciones.py
+# Write your solution in soluciones.py
 
 AGE_MIN_VOTE = 18
 AGE_MIN_DRIVE_LICENSE = 16

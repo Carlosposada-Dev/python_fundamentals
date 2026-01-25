@@ -1,193 +1,219 @@
-"""
-Sección 2: Variables & Data Types
-Ejercicios Prácticos
+# Section 2: Variables & Data Types - Exercises
 
-Instrucciones Generales:
-- Sigue las convenciones de PEP 8 (snake_case, nombres descriptivos, espaciado)
-- Usa nombres de variables que revelen su intención
-- Evita números mágicos - usa constantes con nombres descriptivos
-- Comenta tu código solo cuando sea necesario (el código debe ser auto-explicativo)
-- Piensa en casos extremos y validaciones
-- Crea tu archivo 'soluciones.py' con tus respuestas
+## 📋 General Instructions
 
-IMPORTANTE: Mantén consistencia en el idioma (inglés o español) en todos tus ejercicios.
-"""
+- Follow PEP 8 conventions (snake_case, descriptive names, proper spacing)
+- Use variable names that reveal their intention
+- Avoid magic numbers - use constants with descriptive names
+- Comment your code only when necessary (code should be self-explanatory)
+- Think about edge cases and validations
+- Create a `soluciones.py` file with your answers
+- **Keep consistency in language (English or Spanish) throughout all exercises**
 
-# ============================================
-# Ejercicio 1: Información Personal
-# ============================================
-# Dificultad: Fácil
-# Objetivo: Practicar creación de variables con diferentes tipos de datos
-# Requisitos de código limpio: nombres descriptivos en snake_case
-#
-# TODO:
-# 1. Crea variables para almacenar tu información personal:
-#    - Nombre completo (string)
-#    - Edad (int)
-#    - Altura en metros (float)
-#    - Si estás empleado actualmente (bool)
-#    - Tu ciudad actual (string)
-# 2. Imprime cada variable con un mensaje descriptivo
-#    Ejemplo: "Mi nombre es: Ana García"
-# 3. Usa f-strings para formatear la salida
-#
-# Escribe tu solución en soluciones.py
+---
 
+## Exercise 1: Personal Information
 
-# ============================================
-# Ejercicio 2: Calculadora de Área de Rectángulo
-# ============================================
-# Dificultad: Fácil
-# Objetivo: Trabajar con operaciones matemáticas y conversión de tipos
-# Requisitos de código limpio: evitar números mágicos, nombres descriptivos
-#
-# TODO:
-# 1. Solicita al usuario el ancho del rectángulo (puede tener decimales)
-# 2. Solicita al usuario el alto del rectángulo (puede tener decimales)
-# 3. Calcula el área del rectángulo
-# 4. Calcula el perímetro del rectángulo
-# 5. Imprime los resultados con 2 decimales de precisión
-#
-# EXTRA: Asegúrate de convertir los inputs a float
-# NOTA: Área = ancho × alto, Perímetro = 2 × (ancho + alto)
-#
-# Escribe tu solución en soluciones.py
+**Difficulty**: Beginner  
+**Objective**: Practice creating variables with different data types  
+**Clean Code Requirements**: Descriptive names in snake_case
 
+### TODO:
 
-# ============================================
-# Ejercicio 3: Conversor de Temperatura
-# ============================================
-# Dificultad: Fácil-Medio
-# Objetivo: Practicar conversión de tipos y uso de constantes
-# Requisitos de código limpio: usar constantes para fórmulas, evitar números mágicos
-#
-# TODO:
-# 1. Define constantes para las fórmulas de conversión:
-#    - Factor de multiplicación Celsius a Fahrenheit (9/5)
-#    - Valor de ajuste para Fahrenheit (32)
-# 2. Solicita al usuario una temperatura en Celsius
-# 3. Convierte la temperatura a Fahrenheit usando: F = C × (9/5) + 32
-# 4. Convierte la temperatura a Kelvin usando: K = C + 273.15
-# 5. Imprime las tres temperaturas con mensajes claros
-#
-# EXTRA: Formatea las salidas con 2 decimales
-#
-# Escribe tu solución en soluciones.py
+1. Create variables to store your personal information:
+   - Full name (string)
+   - Age (int)
+   - Height in meters (float)
+   - Currently employed (bool)
+   - Current city (string)
 
+2. Print each variable with a descriptive message
+   - Example: `"My name is: Ana García"`
 
-# ============================================
-# Ejercicio 4: Validación de Edad
-# ============================================
-# Dificultad: Medio
-# Objetivo: Trabajar con constantes, booleanos y validación de datos
-# Requisitos de código limpio: constantes en UPPER_CASE, nombres booleanos descriptivos
-#
-# TODO:
-# 1. Define constantes para:
-#    - Edad mínima para votar (18)
-#    - Edad mínima para licencia de conducir (16)
-#    - Edad para ser mayor de edad (18)
-# 2. Solicita al usuario su edad
-# 3. Crea variables booleanas que determinen si la persona:
-#    - Puede votar
-#    - Puede conducir
-#    - Es mayor de edad
-# 4. Imprime el resultado de cada validación con mensajes claros
-#    Ejemplo: "¿Puedes votar? True" o "¿Puedes votar? False"
-#
-# EXTRA: Los nombres de variables booleanas deben ser autodescriptivos
-# Sugerencia: puede_votar, puede_conducir, es_mayor_edad
-#
-# Escribe tu solución en soluciones.py
+3. Use f-strings for formatting the output
 
+Write your solution in `soluciones.py`
 
-# ============================================
-# Ejercicio 5: Intercambio de Variables (Swap)
-# ============================================
-# Dificultad: Medio
-# Objetivo: Practicar asignación múltiple y manipulación de variables
-# Requisitos de código limpio: nombres descriptivos, demostrar antes/después claramente
-#
-# TODO:
-# 1. Crea dos variables con valores diferentes:
-#    - primera_variable = 100
-#    - segunda_variable = 200
-# 2. Imprime los valores originales con un mensaje claro
-# 3. Intercambia los valores de las variables usando asignación múltiple de Python
-#    (sin usar una variable temporal)
-# 4. Imprime los valores después del intercambio
-#
-# Salida esperada:
-#   Antes: primera = 100, segunda = 200
-#   Después: primera = 200, segunda = 100
-#
-# Escribe tu solución en soluciones.py
+---
 
+## Exercise 2: Rectangle Area Calculator
 
-# ============================================
-# Ejercicio 6: Calculadora de Propina
-# ============================================
-# Dificultad: Medio
-# Objetivo: Trabajar con múltiples variables, constantes y cálculos
-# Requisitos de código limpio: constantes para porcentajes, nombres descriptivos
-#
-# TODO:
-# 1. Define constantes para los porcentajes de propina:
-#    - Servicio excelente: 20% (0.20)
-#    - Servicio bueno: 15% (0.15)
-#    - Servicio regular: 10% (0.10)
-# 2. Solicita al usuario:
-#    - El monto total de la cuenta
-#    - El nivel de servicio (1=regular, 2=bueno, 3=excelente)
-# 3. Calcula la propina según el nivel de servicio
-# 4. Calcula el total a pagar (cuenta + propina)
-# 5. Imprime:
-#    - Monto de la cuenta
-#    - Porcentaje de propina aplicado
-#    - Monto de la propina
-#    - Total a pagar
-#
-# NOTA: Usa if/elif/else para determinar el porcentaje según el nivel
-#
-# Escribe tu solución en soluciones.py
+**Difficulty**: Beginner  
+**Objective**: Work with math operations and type conversion  
+**Clean Code Requirements**: Avoid magic numbers, descriptive names
 
+### TODO:
 
-# ============================================
-# Ejercicio 7: Detector de Tipos de Datos
-# ============================================
-# Dificultad: Medio-Difícil
-# Objetivo: Practicar conversión de tipos y uso de type()
-# Requisitos de código limpio: manejo de errores, código robusto
-#
-# TODO:
-# 1. Solicita al usuario que ingrese un valor
-# 2. Intenta convertir el valor a diferentes tipos y muestra cuál funciona:
-#    - Intenta convertir a int (si falla, captura el error)
-#    - Intenta convertir a float (si falla, captura el error)
-#    - Siempre se puede mantener como string
-# 3. Imprime el tipo original del input (siempre es string)
-# 4. Imprime qué conversiones fueron exitosas
-# 5. Sugiere el "mejor tipo" para ese valor
-#
-# Ejemplos de comportamiento:
-#   Input: "42" → Puede ser int, float o string. Mejor tipo: int
-#   Input: "3.14" → Puede ser float o string. Mejor tipo: float
-#   Input: "Hola" → Solo puede ser string. Mejor tipo: string
-#
-# PISTA: Usa try/except para manejar errores de conversión
-# EXTRA: Este ejercicio te prepara para validación de entrada de usuario
-#
-# Escribe tu solución en soluciones.py
+1. Request from the user the width of the rectangle (can have decimals)
+2. Request from the user the height of the rectangle (can have decimals)
+3. Calculate the area of the rectangle
+4. Calculate the perimeter of the rectangle
+5. Print results with 2 decimal precision
 
+### Extra:
+- Ensure you convert inputs to float
 
-# ============================================
-# IMPORTANTE: 
-# ============================================
-# 1. Crea un archivo llamado 'soluciones.py' en la misma carpeta
-# 2. Copia el número de ejercicio como comentario antes de cada solución
-# 3. Resuelve cada ejercicio aplicando PEP 8 y Clean Code
-# 4. Cuando termines, comparte tu código completo para revisión
-# 5. No te preocupes si algo no sale perfecto, ¡estamos aquí para aprender!
-#
-# ¡Éxito! 🚀
-# ============================================
+### Note:
+- Area = width × height
+- Perimeter = 2 × (width + height)
+
+Write your solution in `soluciones.py`
+
+---
+
+## Exercise 3: Temperature Converter
+
+**Difficulty**: Beginner-Intermediate  
+**Objective**: Practice type conversion and use of constants  
+**Clean Code Requirements**: Use constants for formulas, avoid magic numbers
+
+### TODO:
+
+1. Define constants for conversion formulas:
+   - Multiplication factor Celsius to Fahrenheit (9/5)
+   - Adjustment value for Fahrenheit (32)
+
+2. Request a temperature in Celsius from the user
+3. Convert to Fahrenheit using: `F = C × (9/5) + 32`
+4. Convert to Kelvin using: `K = C + 273.15`
+5. Print all three temperatures with clear messages
+
+### Extra:
+- Format outputs with 2 decimal places
+
+Write your solution in `soluciones.py`
+
+---
+
+## Exercise 4: Age Validation
+
+**Difficulty**: Intermediate  
+**Objective**: Work with constants, booleans, and data validation  
+**Clean Code Requirements**: Constants in UPPER_CASE, descriptive boolean names
+
+### TODO:
+
+1. Define constants for:
+   - Minimum age to vote (18)
+   - Minimum age to drive (16)
+   - Age of majority (18)
+
+2. Request the user's age
+3. Create boolean variables to determine if the person:
+   - Can vote
+   - Can drive
+   - Is of legal age
+
+4. Print results with clear messages
+   - Example: `"Can you vote? True"` or `"Can you vote? False"`
+
+### Extra:
+- Boolean variable names should be self-descriptive
+- Suggestion: `can_vote`, `can_drive`, `is_legal_age`
+
+Write your solution in `soluciones.py`
+
+---
+
+## Exercise 5: Variable Swap
+
+**Difficulty**: Intermediate  
+**Objective**: Practice multiple assignment and variable manipulation  
+**Clean Code Requirements**: Descriptive names, show before/after clearly
+
+### TODO:
+
+1. Create two variables with different values:
+   ```python
+   first_variable = 100
+   second_variable = 200
+   ```
+
+2. Print the original values with a clear message
+3. Swap values using Python's multiple assignment (without a temporary variable)
+4. Print values after the swap
+
+### Expected Output:
+```
+Before: first = 100, second = 200
+After: first = 200, second = 100
+```
+
+Write your solution in `soluciones.py`
+
+---
+
+## Exercise 6: Tip Calculator
+
+**Difficulty**: Intermediate  
+**Objective**: Work with multiple variables, constants, and calculations  
+**Clean Code Requirements**: Constants for percentages, descriptive names
+
+### TODO:
+
+1. Define constants for tip percentages:
+   - Excellent service: 20% (0.20)
+   - Good service: 15% (0.15)
+   - Regular service: 10% (0.10)
+
+2. Request from the user:
+   - Total bill amount
+   - Service level (1=regular, 2=good, 3=excellent)
+
+3. Calculate the tip based on service level
+4. Calculate total to pay (bill + tip)
+5. Print:
+   - Bill amount
+   - Applied tip percentage
+   - Tip amount
+   - Total to pay
+
+### Note:
+- Use if/elif/else to determine percentage based on level
+
+Write your solution in `soluciones.py`
+
+---
+
+## Exercise 7: Data Type Detector
+
+**Difficulty**: Intermediate-Advanced  
+**Objective**: Practice type conversion and use of `type()`  
+**Clean Code Requirements**: Error handling, robust code
+
+### TODO:
+
+1. Request a value from the user
+2. Try converting the value to different types and show which work:
+   - Try converting to int (catch error if it fails)
+   - Try converting to float (catch error if it fails)
+   - Always can be kept as string
+
+3. Print the original input type (always string)
+4. Print which conversions were successful
+5. Suggest the "best type" for that value
+
+### Examples:
+- Input: `"42"` → Can be int, float or string. Best type: int
+- Input: `"3.14"` → Can be float or string. Best type: float
+- Input: `"Hello"` → Only can be string. Best type: string
+
+### Tip:
+- Use try/except to handle conversion errors
+
+### Extra:
+- This exercise prepares you for user input validation
+
+Write your solution in `soluciones.py`
+
+---
+
+## ✅ Important
+
+1. Create a file called `soluciones.py` in the same folder
+2. Copy the exercise number as a comment before each solution
+3. Solve each exercise applying PEP 8 and Clean Code
+4. When finished, share your complete code for review
+5. Don't worry if something doesn't work perfectly, we're here to learn!
+
+**¡Good luck! 🚀**

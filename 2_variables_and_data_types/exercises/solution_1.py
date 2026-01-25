@@ -1,20 +1,20 @@
 # ============================================
-# Ejercicio 1: Información Personal
+# Exercise 1: Personal Information
 # ============================================
-# Dificultad: Fácil
-# Objetivo: Practicar creación de variables con diferentes tipos de datos
-# Requisitos de código limpio: nombres descriptivos en snake_case
+# Difficulty: Beginner
+# Objective: Practice creating variables with different data types
+# Clean Code Requirements: Descriptive names in snake_case
 #
 # TODO:
-# 1. Crea variables para almacenar tu información personal:
-#    - Nombre completo (string)
-#    - Edad (int)
-#    - Altura en metros (float)
-#    - Si estás empleado actualmente (bool)
-#    - Tu ciudad actual (string)
-# 2. Imprime cada variable con un mensaje descriptivo
-#    Ejemplo: "Mi nombre es: Ana García"
-# 3. Usa f-strings para formatear la salida
+# 1. Create variables to store your personal information:
+#    - Full name (string)
+#    - Age (int)
+#    - Height in meters (float)
+#    - Currently employed (bool)
+#    - Your current city (string)
+# 2. Print each variable with a descriptive message
+#    Example: "My name is: Ana García"
+# 3. Use f-strings to format the output
 
 name = "Carlos Andres Posada Chica"
 age = 33

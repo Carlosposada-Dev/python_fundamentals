@@ -1,28 +1,29 @@
-# Ejercicio 6: Calculadora de Propina
 # ============================================
-# Dificultad: Medio
-# Objetivo: Trabajar con múltiples variables, constantes y cálculos
-# Requisitos de código limpio: constantes para porcentajes, nombres descriptivos
+# Exercise 6: Tip Calculator
+# ============================================
+# Difficulty: Intermediate
+# Objective: Work with multiple variables, constants, and calculations
+# Clean Code Requirements: Constants for percentages, descriptive names
 #
 # TODO:
-# 1. Define constantes para los porcentajes de propina:
-#    - Servicio excelente: 20% (0.20)
-#    - Servicio bueno: 15% (0.15)
-#    - Servicio regular: 10% (0.10)
-# 2. Solicita al usuario:
-#    - El monto total de la cuenta
-#    - El nivel de servicio (1=regular, 2=bueno, 3=excelente)
-# 3. Calcula la propina según el nivel de servicio
-# 4. Calcula el total a pagar (cuenta + propina)
-# 5. Imprime:
-#    - Monto de la cuenta
-#    - Porcentaje de propina aplicado
-#    - Monto de la propina
-#    - Total a pagar
+# 1. Define constants for tip percentages:
+#    - Excellent service: 20% (0.20)
+#    - Good service: 15% (0.15)
+#    - Regular service: 10% (0.10)
+# 2. Request from the user:
+#    - The total bill amount
+#    - The service level (1=regular, 2=good, 3=excellent)
+# 3. Calculate the tip based on the service level
+# 4. Calculate the total to pay (bill + tip)
+# 5. Print:
+#    - Bill amount
+#    - Applied tip percentage
+#    - Tip amount
+#    - Total to pay
 #
-# NOTA: Usa if/elif/else para determinar el porcentaje según el nivel
+# NOTE: Use if/elif/else to determine the percentage based on the level
 #
-# Escribe tu solución en soluciones.py
+# Write your solution in soluciones.py
 
 EXCELLENT_SERVICE_TIP = 0.20
 GOOD_SERVICE_TIP = 0.15

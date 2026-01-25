@@ -1,24 +1,24 @@
 # ============================================
-# Ejercicio 5: Intercambio de Variables (Swap)
+# Exercise 5: Variable Swap
 # ============================================
-# Dificultad: Medio
-# Objetivo: Practicar asignación múltiple y manipulación de variables
-# Requisitos de código limpio: nombres descriptivos, demostrar antes/después claramente
+# Difficulty: Intermediate
+# Objective: Practice multiple assignment and variable manipulation
+# Clean Code Requirements: Descriptive names, show before/after clearly
 #
 # TODO:
-# 1. Crea dos variables con valores diferentes:
-#    - primera_variable = 100
-#    - segunda_variable = 200
-# 2. Imprime los valores originales con un mensaje claro
-# 3. Intercambia los valores de las variables usando asignación múltiple de Python
-#    (sin usar una variable temporal)
-# 4. Imprime los valores después del intercambio
+# 1. Create two variables with different values:
+#    - first_variable = 100
+#    - second_variable = 200
+# 2. Print the original values with a clear message
+# 3. Swap the values of the variables using Python's multiple assignment
+#    (without using a temporary variable)
+# 4. Print the values after the swap
 #
-# Salida esperada:
-#   Antes: primera = 100, segunda = 200
-#   Después: primera = 200, segunda = 100
+# Expected output:
+#   Before: first = 100, second = 200
+#   After: first = 200, second = 100
 #
-# Escribe tu solución en soluciones.py
+# Write your solution in soluciones.py
 
 first_variable = 100
 second_variable = 200

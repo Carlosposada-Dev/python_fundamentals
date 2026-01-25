@@ -1,29 +1,29 @@
 # ============================================
-# Ejercicio 7: Detector de Tipos de Datos
+# Exercise 7: Data Type Detector
 # ============================================
-# Dificultad: Medio-Difícil
-# Objetivo: Practicar conversión de tipos y uso de type()
-# Requisitos de código limpio: manejo de errores, código robusto
+# Difficulty: Intermediate-Advanced
+# Objective: Practice type conversion and use of type()
+# Clean Code Requirements: Error handling, robust code
 #
 # TODO:
-# 1. Solicita al usuario que ingrese un valor
-# 2. Intenta convertir el valor a diferentes tipos y muestra cuál funciona:
-#    - Intenta convertir a int (si falla, captura el error)
-#    - Intenta convertir a float (si falla, captura el error)
-#    - Siempre se puede mantener como string
-# 3. Imprime el tipo original del input (siempre es string)
-# 4. Imprime qué conversiones fueron exitosas
-# 5. Sugiere el "mejor tipo" para ese valor
+# 1. Request a value from the user
+# 2. Try converting the value to different types and show which work:
+#    - Try converting to int (if it fails, catch the error)
+#    - Try converting to float (if it fails, catch the error)
+#    - Can always be kept as string
+# 3. Print the original input type (always string)
+# 4. Print which conversions were successful
+# 5. Suggest the "best type" for that value
 #
-# Ejemplos de comportamiento:
-#   Input: "42" → Puede ser int, float o string. Mejor tipo: int
-#   Input: "3.14" → Puede ser float o string. Mejor tipo: float
-#   Input: "Hola" → Solo puede ser string. Mejor tipo: string
+# Examples of behavior:
+#   Input: "42" → Can be int, float or string. Best type: int
+#   Input: "3.14" → Can be float or string. Best type: float
+#   Input: "Hello" → Only can be string. Best type: string
 #
-# PISTA: Usa try/except para manejar errores de conversión
-# EXTRA: Este ejercicio te prepara para validación de entrada de usuario
+# TIP: Use try/except to handle conversion errors
+# EXTRA: This exercise prepares you for user input validation
 #
-# Escribe tu solución en soluciones.py
+# Write your solution in soluciones.py
 
 value = input("Please enter something: ")
 

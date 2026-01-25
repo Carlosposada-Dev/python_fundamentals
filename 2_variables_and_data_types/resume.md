@@ -1,122 +1,122 @@
-# Sección 2: Variables & Data Types - Resumen
+# Section 2: Variables & Data Types - Summary
 
-## 🎯 Conceptos Clave
+## 🎯 Key Concepts
 
-- **Variable**: Nombre que apunta a un valor en memoria
-- **Tipado dinámico**: No necesitas declarar tipos, Python los infiere automáticamente
-- **5 tipos básicos**: `int`, `float`, `str`, `bool`, `None`
-- **Conversión de tipos**: `int()`, `float()`, `str()` para convertir entre tipos
-- **Verificación de tipo**: `type()` muestra el tipo de una variable
+- **Variable**: Name that points to a value in memory
+- **Dynamic Typing**: You don't need to declare types, Python infers them automatically
+- **5 Basic Types**: `int`, `float`, `str`, `bool`, `None`
+- **Type Conversion**: `int()`, `float()`, `str()` to convert between types
+- **Type Checking**: `type()` shows the type of a variable
 
-## 🎨 Buenas Prácticas y Convenciones
+## 🎨 Best Practices and Conventions
 
-### PEP 8 aplicado a variables
+### PEP 8 applied to variables
 
 ```python
-# Variables y funciones: snake_case
-edad_usuario = 25
-altura_metros = 1.77
-nombre_completo = "Carlos"
+# Variables and functions: snake_case
+user_age = 25
+height_meters = 1.77
+full_name = "Carlos"
 
-# Constantes: UPPER_SNAKE_CASE
-MAX_INTENTOS = 3
+# Constants: UPPER_SNAKE_CASE
+MAX_ATTEMPTS = 3
 PI = 3.14159
-EDAD_MINIMA = 18
+MINIMUM_AGE = 18
 
-# Espaciado correcto
-x = 5  # ✅ Un espacio antes y después de =
-x=5    # ❌ Sin espacios
+# Correct spacing
+x = 5  # ✅ One space before and after =
+x=5    # ❌ No spaces
 ```
 
-### Clean Code aplicado
+### Clean Code applied
 
-**Nombres descriptivos:**
+**Descriptive names:**
 ```python
-# ❌ Malo
+# ❌ Bad
 x = 25
 n = "Juan"
 d = 1.75
 
-# ✅ Bueno
-edad_usuario = 25
-nombre_completo = "Juan"
-altura_metros = 1.75
+# ✅ Good
+user_age = 25
+full_name = "Juan"
+height_meters = 1.75
 ```
 
-**Evitar números mágicos:**
+**Avoid magic numbers:**
 ```python
-# ❌ Malo
-if edad < 18:
-    print("No permitido")
+# ❌ Bad
+if age < 18:
+    print("Not allowed")
 
-# ✅ Bueno
-EDAD_MINIMA = 18
-if edad < EDAD_MINIMA:
-    print("No permitido")
+# ✅ Good
+MINIMUM_AGE = 18
+if age < MINIMUM_AGE:
+    print("Not allowed")
 ```
 
-## 💡 Puntos Importantes a Recordar
+## 💡 Important Points to Remember
 
-- **Una variable, un propósito**: No reutilices variables para cosas diferentes
-- **Consistencia en el idioma**: Elige inglés o español, no mezcles
-- **F-strings para formateo**: `f"Edad: {edad}"` es más legible
-- **Validación de entrada**: Siempre convierte y valida datos del usuario
-- **Try-except específico**: Captura errores concretos, no uses `except:` vacío
+- **One variable, one purpose**: Don't reuse variables for different things
+- **Language consistency**: Choose English or Spanish, don't mix them
+- **F-strings for formatting**: `f"Age: {age}"` is more readable
+- **Input validation**: Always convert and validate data from the user
+- **Specific try-except**: Catch specific errors, don't use bare `except:`
 
-## ⚠️ Errores Comunes a Evitar
+## ⚠️ Common Errors to Avoid
 
-### Funcionales
+### Functional
 ```python
-# ❌ Variable no definida
-print(nombre)  # NameError
+# ❌ Variable not defined
+print(name)  # NameError
 
-# ❌ Mezclar tipos incompatibles
-edad = "25"
-resultado = edad + 5  # TypeError
+# ❌ Mixing incompatible types
+age = "25"
+result = age + 5  # TypeError
 
-# ❌ Try-except incorrecto
+# ❌ Wrong try-except
 except:
-    variable: None  # ':' no asigna, usa '='
+    variable: None  # ':' doesn't assign, use '='
 ```
 
-### De estilo
+### Style
 ```python
-# ❌ Nombres no descriptivos
-x = 25  # ¿Qué es x?
+# ❌ Non-descriptive names
+x = 25  # What is x?
 
-# ❌ No usar constantes
-if intentos > 3:  # ¿Por qué 3?
+# ❌ Not using constants
+if attempts > 3:  # Why 3?
 
-# ❌ Inconsistencia
-user_edad = 25  # Mezclando inglés/español
+# ❌ Inconsistency
+user_edad = 25  # Mixing English/Spanish
 ```
 
-## 🔗 Conexión con Otros Conceptos
+## 🔗 Connection with Other Concepts
 
-- **Operadores** (siguiente): Manipularás variables con +, -, *, /, %, etc.
-- **Strings**: Métodos avanzados para trabajar con texto
-- **Condicionales**: Usarás booleanos para tomar decisiones
-- **Loops**: Iterarás sobre rangos usando variables de control
-- **Funciones**: Variables como parámetros y valores de retorno
+- **Operators** (next): You'll manipulate variables with +, -, *, /, %, etc.
+- **Strings**: Advanced methods for working with text
+- **Conditionals**: You'll use booleans to make decisions
+- **Loops**: You'll iterate over ranges using control variables
+- **Functions**: Variables as parameters and return values
 
-## 📝 Vocabulario Técnico
+## 📝 Technical Vocabulary
 
-- **Variable**: Nombre que referencia un valor en memoria
-- **Tipo de dato**: Clasificación que determina qué operaciones son válidas
-- **Casting**: Conversión entre tipos (`int()`, `float()`, `str()`)
-- **Tipado dinámico**: El tipo se determina en tiempo de ejecución
-- **Constante**: Variable cuyo valor no debería cambiar (convención)
-- **snake_case**: Convención de nombres con guiones bajos
-- **Número mágico**: Valor hardcodeado sin contexto
+- **Variable**: Name that references a value in memory
+- **Data Type**: Classification that determines what operations are valid
+- **Casting**: Conversion between types (`int()`, `float()`, `str()`)
+- **Dynamic Typing**: The type is determined at runtime
+- **Constant**: Variable whose value shouldn't change (convention)
+- **snake_case**: Naming convention with underscores
+- **Magic Number**: Hardcoded value without context
 
-## ✅ Checklist de Dominio
+## ✅ Mastery Checklist
 
-- [x] Creo variables con diferentes tipos de datos
-- [x] Entiendo qué es el tipado dinámico
-- [x] Uso `type()` para verificar tipos
-- [x] Convierto entre tipos correctamente
-- [x] Nombro variables en snake_case
-- [x] Uso constantes en UPPER_SNAKE_CASE
-- [x] Evito números mágicos
-- [x] Escribo código con nombres descriptivos
-- [x] Manejo errores con try-except específico
+- [x] I create variables with different data types
+- [x] I understand what dynamic typing is
+- [x] I use `type()` to verify types
+- [x] I convert between types correctly
+- [x] I name variables in snake_case
+- [x] I use constants in UPPER_SNAKE_CASE
+- [x] I avoid magic numbers
+- [x] I write code with descriptive names
+- [x] I handle errors with specific try-except
